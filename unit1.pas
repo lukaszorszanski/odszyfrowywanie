@@ -22,6 +22,8 @@ type
     ImageList1: TImageList;
     Label1: TLabel;
     Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
     OpenDialog1: TOpenDialog;
     RadioButton1: TRadioButton;
     RadioButton2: TRadioButton;
@@ -33,6 +35,8 @@ type
     procedure Button3Click(Sender: TObject);
     procedure Button4Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure RadioButton1Change(Sender: TObject);
+    procedure RadioButton2Click(Sender: TObject);
     procedure ToolButton1Click(Sender: TObject);
   private
 
@@ -66,11 +70,24 @@ begin
   nrIteracji := 0;
 end;
 
+procedure TForm1.RadioButton1Change(Sender: TObject);
+begin
+  Edit1.NumbersOnly:= False;
+
+end;
+
+procedure TForm1.RadioButton2Click(Sender: TObject);
+begin
+  Edit1.NumbersOnly:= True;
+
+end;
+
 procedure TForm1.ToolButton1Click(Sender: TObject);
 begin
   if OpenDialog1.Execute then
   begin
     fileName := OpenDialog1.Filename;
+    Form1.Caption := fileName;
   end;
 end;
 
