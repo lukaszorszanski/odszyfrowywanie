@@ -1,0 +1,173 @@
+object Form1: TForm1
+  Left = 259
+  Height = 284
+  Top = 132
+  Width = 404
+  Caption = 'Odszyfrowywanie'
+  ClientHeight = 284
+  ClientWidth = 404
+  OnShow = FormShow
+  LCLVersion = '2.0.10.0'
+  object Button1: TButton
+    Left = 24
+    Height = 33
+    Top = 40
+    Width = 92
+    Caption = 'Odszyfruj'
+    Font.CharSet = EASTEUROPE_CHARSET
+    Font.Color = clBlack
+    Font.Height = -13
+    Font.Name = 'Segoe UI'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Label1: TLabel
+    Left = 24
+    Height = 15
+    Top = 80
+    Width = 54
+    Caption = 'Nr iteracji:'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 88
+    Height = 15
+    Top = 80
+    Width = 6
+    Caption = '0'
+    ParentColor = False
+  end
+  object Button2: TButton
+    Left = 232
+    Height = 25
+    Top = 40
+    Width = 154
+    Caption = 'Zapisz tabliczke kodowa'
+    OnClick = Button2Click
+    TabOrder = 1
+  end
+  object GroupBox1: TGroupBox
+    Left = 16
+    Height = 160
+    Top = 104
+    Width = 184
+    Caption = 'Zamiana znakow'
+    ClientHeight = 140
+    ClientWidth = 180
+    TabOrder = 2
+    object RadioButton1: TRadioButton
+      Left = 16
+      Height = 19
+      Top = 40
+      Width = 46
+      Caption = 'Znak'
+      Checked = True
+      TabOrder = 0
+      TabStop = True
+    end
+    object RadioButton2: TRadioButton
+      Left = 16
+      Height = 19
+      Top = 72
+      Width = 94
+      Caption = 'Kod Win-1250'
+      TabOrder = 1
+    end
+    object SpinEdit1: TSpinEdit
+      Left = 16
+      Height = 23
+      Top = 8
+      Width = 50
+      MaxValue = 255
+      TabOrder = 2
+    end
+    object Edit1: TEdit
+      Left = 88
+      Height = 23
+      Top = 8
+      Width = 80
+      TabOrder = 3
+    end
+    object Button3: TButton
+      Left = 15
+      Height = 25
+      Top = 104
+      Width = 95
+      Caption = 'Zamień znak'
+      OnClick = Button3Click
+      TabOrder = 4
+    end
+  end
+  object ToolBar1: TToolBar
+    Left = 0
+    Height = 26
+    Top = 0
+    Width = 404
+    Caption = 'ToolBar1'
+    EdgeBorders = [ebLeft, ebTop, ebRight, ebBottom]
+    Images = ImageList1
+    TabOrder = 3
+    object ToolButton1: TToolButton
+      Left = 3
+      Top = 2
+      Caption = 'ToolButton1'
+      ImageIndex = 0
+      OnClick = ToolButton1Click
+    end
+  end
+  object Button4: TButton
+    Left = 232
+    Height = 25
+    Top = 72
+    Width = 154
+    Caption = 'Wczytaj tabliczke kodowa'
+    OnClick = Button4Click
+    TabOrder = 4
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 248
+    Top = 128
+  end
+  object ImageList1: TImageList
+    Left = 328
+    Top = 168
+    Bitmap = {
+      4C69010000001000000010000000FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000
+      00FF000000FF000000FF000000FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00000000FF000000FFFFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00000000FF000000FF000000FF000000FF0000
+      00FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00000000FFFFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000
+      00FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00000000FFFFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF000000
+      00FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00000000FFFFFFFF00FFFF
+      FF00FFFFFF00000000FF000000FF000000FF000000FF000000FF000000FF0000
+      00FF000000FF000000FFFFFFFF00FFFFFF00FFFFFF00000000FFFFFFFF00FFFF
+      FF00000000FF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F
+      7FFF000000FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00000000FFFFFFFF000000
+      00FF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF0000
+      00FFFFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00000000FF000000FF7F7F
+      7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF7F7F7FFF000000FFFFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00000000FF000000FF0000
+      00FF000000FF000000FF000000FF000000FF000000FF000000FFFFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
+      FF00FFFFFF00FFFFFF00FFFFFF00
+    }
+  end
+end
